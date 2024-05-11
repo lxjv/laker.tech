@@ -1,0 +1,49 @@
+@import url(./base.css);
+
+#content-wrap {
+	border: #6768aa 1px solid;
+	border-radius: 3em 1em;
+	padding: 2em;
+	margin: 2em;
+}
+
+blockquote {
+	margin-left: 13px;
+	padding-left: 8px;
+	border-left: 5px double #6768aa;
+	border-spacing: 5px;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid #fff8e7;
+	margin: 1em 0;
+	text-align: center;
+	height: 5px;
+}
+
+small {
+	font-size: 69%;
+	font-weight: 420;
+}
+
+img {
+	border: 1px solid #fff8e7;
+}
+
+#site-title,
+.page-title {
+	margin-top: 0;
+}
+
+/* blog stuff */
+#post-header-image {
+	max-width: 720px;
+}
+
+.post-comment-ask {
+	max-width: fit-content;
+	padding: 1em 2em;
+	border: #6faace 1px solid;
+	border-radius: 1em 3em;
+}

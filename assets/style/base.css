@@ -1,0 +1,73 @@
+@import url(./reset.css);
+
+/* -- variables -- */
+:root {
+	/* colors */
+	--accent: var(--indigo);
+	--accent2: var(--lblue);
+
+	--black: #040404;
+	--latte: #fff8e7;
+	--indigo: #6768AA;
+	--lblue: #94B1FF;
+	--orange: #DC784F;
+
+	--lm-text: var(--black);
+	--lm-back: var(--latte);
+
+	--dm-text: var(--latte);
+	--dm-back: var(--black);
+
+	--font-prose: 'OpenDyslexic', 'Atkinson Hyperlegible', 'Albert Sans', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+	--font-code: 'IBM Plex Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+}
+
+/* -- dark mode -- */
+@media (prefers-color-scheme: dark) {
+	body {
+		background: var(--dm-back);
+		color: var(--dm-text);
+	}
+
+	hr {
+		border-top: 1px solid var(--dm-text);
+	}
+
+	.post-tag {
+		color: var(--accent);
+	}
+
+	a[href] {
+		color: var(--dm-text);
+		text-decoration: underline dotted #fff8e79c;
+	}
+
+	.literal-book-item__title {
+		color: --dm-text !important;
+	}
+
+	.statuslol_container {
+		border: 1px solid --dm-text;
+	}
+}
+
+/* -- light mode and defaults -- */
+body {
+	background-color: var(--lm-back);
+	color: var(--lm-text);
+	
+	font-family: var(--font-prose);
+	font-size: 1.05rem;
+}
+
+a[href] {
+	color: var(--lm-text);
+	text-decoration: underline dotted var(--black);
+}
+
+/* -- utility classes -- */
+.center { display: flex; align-items: center; justify-content: center; }
+/* No Text Decoration */ .ntd { text-decoration: none !important; }
+/* No Display */ .nd { display: none; }
+/* No Borders (or tories thx) */ .nb { border: none !important; }
+/* No Margin */ .nm { margin: 0 !important; }

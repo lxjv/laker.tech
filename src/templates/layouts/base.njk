@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{title}} / Laker Turner</title>
+	<link rel="stylesheet" href="/cdn/style/main.css">
+</head>
+
+<body>
+	<div id="header">
+		<div id="header-name">
+			<a href="/">{{metadata.title}}</a>
+		</div>
+		<div id="header-nav">
+			<a href="">a</a>
+			<a href="">b</a>
+			<a href="">c</a>
+			<a href="">d</a>
+			<a href="">e</a>
+		</div>
+
+		<div id="content">
+			<div id="content-wrap">
+				{{content | safe}}
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

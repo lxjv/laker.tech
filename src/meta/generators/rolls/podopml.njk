@@ -1,0 +1,16 @@
+---
+permalink: /roll/podcasts.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>RSS Feeds for Laker's Podroll</title>
+        <dateCreated>{{ roll.lastUpdated | dateISO }}</dateCreated>
+    </head>
+    <body>
+        {%- for pod in roll.podcasts -%}
+            <outline text="{{ pod.name }}" title="{{ pod.name }}" type="rss" xmlUrl="{{ pod.feed }}" htmlUrl="{{ pod.url }}"/>
+        {% endfor %}
+    </body>
+</opml>
