@@ -1,0 +1,13 @@
+---
+title: Selected Ambient Works
+subtitle: yes this is an aphex twin reference
+permalink: /projects/index.html
+---
+
+{% for project in collections.project %}
+    <p>
+        <a href="{{ project.url }}">{{ project.data.title }}</a>
+        {{ project.date | datePretty }}
+        {{ project.data.subtitle }}
+    </p>
+{% endfor %}

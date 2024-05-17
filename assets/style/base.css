@@ -22,35 +22,6 @@
 	--font-code: 'IBM Plex Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 }
 
-/* -- dark mode -- */
-@media (prefers-color-scheme: dark) {
-	body {
-		background: var(--dm-back);
-		color: var(--dm-text);
-	}
-
-	hr {
-		border-top: 1px solid var(--dm-text);
-	}
-
-	.post-tag {
-		color: var(--accent);
-	}
-
-	a[href] {
-		color: var(--dm-text);
-		text-decoration: underline dotted #fff8e79c;
-	}
-
-	.literal-book-item__title {
-		color: --dm-text !important;
-	}
-
-	.statuslol_container {
-		border: 1px solid --dm-text;
-	}
-}
-
 /* -- light mode and defaults -- */
 body {
 	background-color: var(--lm-back);
@@ -65,8 +36,25 @@ a[href] {
 	text-decoration: underline dotted var(--black);
 }
 
+/* -- dark mode -- */
+@media (prefers-color-scheme: dark) {
+	body {
+		background: var(--dm-back);
+		color: var(--dm-text);
+	}
+
+	hr {
+		border-top: 1px solid var(--dm-text);
+	}
+
+	a[href] {
+		color: var(--dm-text);
+		text-decoration: underline dotted #fff8e79c;
+	}
+}
+
 /* -- utility classes -- */
-.center { display: flex; align-items: center; justify-content: center; }
+/* Center thingies */ .center { display: flex; align-items: center; justify-content: center; }
 /* No Text Decoration */ .ntd { text-decoration: none !important; }
 /* No Display */ .nd { display: none; }
 /* No Borders (or tories thx) */ .nb { border: none !important; }

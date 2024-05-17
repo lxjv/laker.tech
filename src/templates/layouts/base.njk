@@ -5,27 +5,59 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{title}} / Laker Turner</title>
 	<link rel="stylesheet" href="/cdn/style/main.css">
+	<link
+			href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+			rel="stylesheet"
+		/>
 </head>
 
+<!-- this is where the ska begins -->
 <body>
+	<br>
 	<div id="header">
 		<div id="header-name">
-			<a href="/">{{metadata.title}}</a>
-		</div>
-		<div id="header-nav">
-			<a href="">a</a>
-			<a href="">b</a>
-			<a href="">c</a>
-			<a href="">d</a>
-			<a href="">e</a>
+			<h1><a class="ntd" href="/">{{metadata.title}}</a></h1>
 		</div>
 
-		<div id="content">
-			<div id="content-wrap">
-				{{content | safe}}
-			</div>
+		<div id="header-nav" style="margin-top:0.25em;">
+			<a href="/contact">talk to me</a>
+			<a href="/blog">my blog!</a>
+			<a href="/projects">Selected Ambient Works 05-24</a>
+			<a href="/more">more tat</a>
+		</div>
+
+	</div>
+
+	<main id="content">
+		<div id="content-wrap">
+			{{content | safe}}
+		</div>
+	</main>
+
+	<footer>
+		<p>
+			⚧︎ {{author.name}} 2024 ⋆
+			You can read the <a href="/colophon">colophon</a>, if you'd like.
+		</p>
+
+		<div id="webrings">
+			{% for ring in webrings %}
+			<span class="webring">
+				<a href="{{ring.prev}}"><-- </a>
+            	<a href="{{ring.link}}">{{ring.name}}</a>
+            	<a href="{{ring.next}}">--></a>
+           	    {% if ring.random != null %}
+               		<a href="{{ring.random}}">random</a>
+            	{% endif %}
+			</span>
+   			{% endfor %}
 		</div>
 		
-	</div>
+		<div id="footer-quotes" style="margin-top: 1em;">
+				{% for quote in flavourtext.quotes | randomItem %}
+					<blockquote id="header-text-bq">{{ quote | safe }}</blockquote>
+				{% endfor %}
+			</div>
+	</footer>
 </body>
 </html>

@@ -1,0 +1,28 @@
+---
+title: she / her
+layout:
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+
+<style>
+    html {
+        background-color: #040404;
+        color: #fff8e7;
+    }
+</style>
+
+<body>
+    {{pronouns.profiles.en.opinions.croissant.icon}}
+
+    {% for item in pronouns.profiles.en.opinions %}
+        {{item.icon}}
+    {% endfor %}
+</body>
+</html>

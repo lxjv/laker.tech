@@ -1,0 +1,26 @@
+---
+layout: base.njk
+---
+
+<div>
+	<h2 class="page-title">
+        {{title | safe}}
+        <small>
+            Last updated {{page.date | datePretty}}
+        </small>
+    </h2>
+
+	{% if uplink != null %}
+    	<a href="{{uplink}}"><- back</a>
+	{% endif %}
+
+    {% if subtitle != null %}
+	    <blockquote>
+		    {{subtitle | safe}}
+		</blockquote>
+    {% endif %}
+</div>
+
+<article>
+	{{content | safe}}
+</article>

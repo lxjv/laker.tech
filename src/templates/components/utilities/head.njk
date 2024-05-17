@@ -1,0 +1,62 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title> {{title}} | {{metadata.title}}</title>
+	<meta name="description" content="{{subtitle}}">
+
+	<!-- favicons -->
+	<link rel="icon" href="/favicon.ico" sizes="32x32">
+	<link rel="icon" href="/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+	<link rel="manifest" href="/manifest.webmanifest">
+
+	<!-- go eleventy wooooo -->
+	<meta name="generator" content="{{ eleventy.generator }}">
+
+	<!-- opengraph -->
+	<meta property="og:site_name" content="{{metadata.title}}">
+	<meta property="og:title" content="{{title}} | {{metadata.title}}">
+	<meta property="og:description" content="{{subtitle}}">
+	<meta property="twitter:description" content="{{subtitle}}">
+	<meta property="description" content="{{subtitle}}">
+	<meta property="og:url" content="{{metadata.cURL}}{{page.url}}">
+	<meta property="og:type" content="{{ogtype}}">
+	<meta property="article:publisher" content="https://laker.tech">
+	<meta property="article:section" content="Concorde">
+	<meta property="article:tag" content="blog">
+	<meta property="og:image" content="{{author.photo}}">
+	<meta property="og:image:secure_url" content="{{author.photo}}">
+	<meta property="og:image:width" content="1280">
+	<meta property="og:image:height" content="640">
+	<meta property="twitter:title" content="{{title}} | {{metadata.title}}">
+	<meta property="twitter:card" content="summary">
+	<meta property="twitter:image" content="{{author.photo}}">
+
+	<!-- feed autodiscovery -->
+	<link rel="alternate" type="application/rss+xml" title="Laker Turner (RSS)" href="/feed.xml">
+	<link rel="alternate" type="application/atom+xml" title="Laker Turner (Atom)" href="/atom.xml">
+	<link rel="alternate" type="application/json" title="Laker Turner (JSON)" href="/feed.json">
+
+	<!-- webmentions -->
+	<link rel="webmention" href="https://webmention.io/laker.tech/webmention">
+
+	<!-- indielogin -->
+	<link rel="authorization_endpoint" href="https://indieauth.com/auth">
+	<link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+
+	<!-- auth stuff -->
+	<link rel="me" href="mailto:la@laker.gay">
+	<link href="https://github.com/lxjv" rel="me">
+	<link rel="pgpkey" href="/.well-known/pgp">
+    <link rel="openid.delegate" href="https://laker.tech/">
+	<link rel="openid2.provider" href="https://openid.indieauth.com/openid">
+
+	<!-- style -->
+	<meta name="color-scheme" content="dark light">
+	<meta name="theme-color" content="#040404"/>
+	<link rel="stylesheet" href="/style/main.css">
+
+	<link rel="stylesheet" href="/style/status.css">
+	<script defer src="https://kit.fontawesome.com/a4ad01e3e6.js" crossorigin="anonymous"></script>
+</head>

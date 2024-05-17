@@ -1,0 +1,105 @@
+{
+  "lastUpdated": "2024-04-08",
+  "version": "1",
+
+  "blogs": [
+    {
+      "name": "Robb Knight",
+      "url": "https://rknight.me",
+      "feed": "https://rknight.me/subscribe/posts/rss.xml"
+    },
+    {
+      "name": "Neatnik Notes",
+      "url": "https://notes.neatnik.net",
+      "feed": "https://notes.neatnik.net/rss.xml"
+    },
+    {
+      "name": "yours, tiramisu",
+      "url": "https://tiramisu.bearblog.dev",
+      "feed": "https://tiramisu.bearblog.dev/feed/?type=rss"
+    },
+    {
+      "name": "but she's a girl...",
+      "url": "https://www.rousette.org.uk",
+      "feed": "https://www.rousette.org.uk/index.xml"
+    },
+    {
+      "name": "Derek Sivers",
+      "url": "https://sive.rs",
+      "feed": "https://sive.rs/en.atom"
+    },
+    {
+      "name": "Xe Iaso",
+      "url": "https://xeiaso.net/",
+      "feed": "https://xeiaso.net/blog.rss"
+    }
+  ],
+  "podcasts": [
+    {
+      "name": "Hemispheric Views",
+      "url": "https://hemisphericviews.com",
+      "feed": "https://feeds.fireside.fm/hemisphericviews/rss"
+    },
+    {
+      "name": "Ruminate",
+      "url": "https://ruminatepodcast.com/",
+      "feed": "https://feeds.libsyn.com/517508/rss"
+    },
+    {
+      "name": "Mindful Moments with David Larbi",
+      "url": "https://shows.acast.com/64955d8928cc6d0011c0760f",
+      "feed": "https://feeds.acast.com/public/shows/mindful-moments-with-david-larbi"
+    },
+    {
+      "name": "Cortex",
+      "url": "https://www.relay.fm/cortex",
+      "feed": "https://www.relay.fm/cortex/feed"
+    },
+    {
+      "name": "99% Invisible",
+      "url": "https://99percentinvisible.org/",
+      "feed": "https://feeds.simplecast.com/BqbsxVfO"
+    },
+    {
+      "name": "Do by Friday",
+      "url": "https://dobyfriday.com/",
+      "feed": "https://feeds.simplecast.com/5nKJV82u"
+    },
+    {
+      "name": "Deep Dive with Ali Abdaal",
+      "url": "https://aliabdaal.com/podcast/",
+      "feed": "https://feeds.transistor.fm/deep-dive-with-ali-abdaal"
+    },
+    {
+      "name": "TechDif Reverse Trivia",
+      "url": "https://www.techdif.co.uk/",
+      "feed": "https://www.techdif.co.uk/podcast/feed.xml"
+    }
+  ],
+  "youtube": [
+    {
+      "name": "Tom Scott",
+      "handle": "@TomScottGo"
+    },
+    {
+      "name": "No Boilerplate",
+      "handle": "@NoBoilerplate"
+    },
+    {
+      "name": "theneedledrop",
+      "handle": "@theneedledrop"
+    },
+    {
+      "name": "Turning the Tables",
+      "handle": "@turningthetables"
+    },
+    {
+      "name": "Veronica Explains",
+      "handle": "@VeronicaExplains"
+    },
+    {
+      "name": "Internet Shaquille",
+      "handle": "@internetshaquille"
+    }
+  ]
+}

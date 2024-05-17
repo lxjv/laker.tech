@@ -1,0 +1,41 @@
+---
+layout: base
+---
+
+<article class="h-entry">
+
+	<div class="post-meta">
+
+	<h2 class="page-title">
+		<span class="p-name">{{title | safe}}</span>
+
+		<small>
+			<a class="u-url ntd" href="https://{{metadata.domain}}{{page.url}}">
+				<time class="dt-published" datetime="{{page.date | dateISO}}">{{page.date | datePretty}}</time>
+			</a>
+			<span>{{content | wordcount}} words</span>
+		</small>
+
+	</h2>
+        <p>
+		{% for tag in tags %}
+            <span class="p-category"><a class="ntd" href="/blog/t/{{tag}}">#{{tag}}</a></span>
+		{% endfor %}
+        </p>
+		<blockquote class="p-summary" style="margin-bottom: 1em;">
+			{{subtitle | safe}}
+		</blockquote>
+
+	</div>
+
+	<div class="e-content">
+		{% if image.src != null %}
+		<img src="/cdn/image/posts/{{page.fileSlug}}/{{image.src}}" alt="{{image.alt}}" class="post-header-img">
+		<caption>{{image.alt}}</caption>
+		{% endif %}
+
+		{{content | safe}}
+	</div>
+
+	<p class="post-comment-ask">Want to comment on this post? <a href="mailto:hello+{{page.fileSlug}}@concorde.blog">Email me</a>!</p>
+</article>

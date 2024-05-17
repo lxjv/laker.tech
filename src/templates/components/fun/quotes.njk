@@ -1,0 +1,3 @@
+{% for quote in quotes | randomItem %}
+	<blockquote>{{ quote | safe }}</blockquote>
+{% endfor %}

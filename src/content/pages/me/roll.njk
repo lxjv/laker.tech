@@ -1,0 +1,40 @@
+---
+title: Blog & Podroll
+subtitle: What's in my beaker?
+date: 2024-02-13
+layout: page
+permalink: /roll/index.html
+uplink: /more
+---
+
+<h3>Blogroll (<a href="blog.xml" download="download">opml</a>)</h3>
+<ul>
+    {% for blog in roll.blogs %}
+        <li>
+            <a href="{{blog.url}}">{{blog.name}}</a>
+            {% if blog.feed != null %}
+                -- <a href="{{blog.feed}}">rss/atom feed</a>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+<h3>Podroll (<a href="podcasts.xml" download="download">opml</a>)</h3>
+<ul>
+    {% for pod in roll.podcasts %}
+        <li>
+            <a href="{{pod.url}}">{{pod.name}}</a>
+            {% if pod.feed != null %}
+                -- <a href="{{pod.feed}}">rss/atom feed</a>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+
+<h3>Youtube Channels (cause why not?)</h3>
+<ul>
+    {% for channel in roll.youtube %}
+        <li>
+            <a href="https://youtube.com/{{channel.handle}}">{{channel.name}}</a>
+        </li>
+    {% endfor %}
+</ul>
