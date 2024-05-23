@@ -20,7 +20,7 @@ debug:
 
 # deploy to eclipse
 deploy:
-	ssh eclipse /opt/sites/laker.tech/deploy.sh
+  ssh eclipse /opt/sites/laker.tech/deploy.sh
 
 # (WIP) rollback on eclipse
 rollback:

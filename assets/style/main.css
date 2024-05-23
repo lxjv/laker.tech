@@ -5,11 +5,15 @@ body {
 }
 
 header {
-	margin-top: 4em;
+	margin-top: 1em;
+}
+
+footer {
+	margin-bottom: 1em;
 }
 
 #content {
-	margin: 2em 0 0 0;
+	margin: 16.8px 0 0 0;
 }
 
 #content-wrap {

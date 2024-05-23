@@ -1,0 +1,25 @@
+<footer>
+	<p>
+		⚧︎ {{author.name}} 2024 ⋆
+		You can read the <a href="/colophon">colophon</a>, if you'd like.
+	</p>
+
+	<div id="webrings">
+		{% for ring in webrings %}
+		<span class="webring">
+			<a href="{{ring.prev}}"><-- </a>
+			<a href="{{ring.link}}">{{ring.name}}</a>
+			<a href="{{ring.next}}">--></a>
+		{% if ring.random != null %}
+              		<a href="{{ring.random}}">random</a>
+            	{% endif %}
+		</span>
+		{% endfor %}
+	</div>
+		
+	<div id="footer-quotes" style="margin-top: 1em;">
+		{% for quote in flavourtext.quotes | randomItem %}
+		<blockquote id="header-text-bq">{{ quote | safe }}</blockquote>
+		{% endfor %}
+	</div>
+</footer>

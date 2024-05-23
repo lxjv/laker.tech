@@ -11,7 +11,9 @@ layout: base
 
 		<small>
 			<a class="u-url ntd" href="https://{{metadata.domain}}{{page.url}}">
-				<time class="dt-published" datetime="{{page.date | dateISO}}">{{page.date | datePretty}}</time>
+				<time class="dt-published" datetime="{{page.date | dateISO}}">
+				{{page.date | datePretty}}
+				</time>
 			</a>
 			<span>{{content | wordcount}} words</span>
 		</small>
@@ -19,9 +21,12 @@ layout: base
 	</h2>
         <p>
 		{% for tag in tags %}
-            <span class="p-category"><a class="ntd" href="/blog/t/{{tag}}">#{{tag}}</a></span>
+            <span class="p-category">
+				<a class="ntd" href="/blog/t/{{tag}}">#{{tag}}</a>
+			</span>
 		{% endfor %}
         </p>
+		
 		<blockquote class="p-summary" style="margin-bottom: 1em;">
 			{{subtitle | safe}}
 		</blockquote>
@@ -37,5 +42,8 @@ layout: base
 		{{content | safe}}
 	</div>
 
-	<p class="post-comment-ask">Want to comment on this post? <a href="mailto:hello+{{page.fileSlug}}@concorde.blog">Email me</a>!</p>
+	<p class="post-comment-ask">
+		Want to comment on this post?
+		<a href="mailto:hello+{{page.fileSlug}}@concorde.blog?subject=A%20reply%20to%20{{title}}%20(%2F{{page.fileSlug}})">Email me</a>!
+	</p>
 </article>
