@@ -19,6 +19,7 @@ layout: base
 		</small>
 
 	</h2>
+	{% include "utilities/back.njk" %}
         <p>
 		{% for tag in tags %}
             <span class="p-category">
@@ -44,6 +45,7 @@ layout: base
 
 	<p class="post-comment-ask">
 		Want to comment on this post?
-		<a href="mailto:hello+{{page.fileSlug}}@concorde.blog?subject=A%20reply%20to%20{{title}}%20(%2F{{page.fileSlug}})">Email me</a>!
+		<a href="mailto:hello+{{page.fileSlug}}@concorde.blog?subject=A%20reply%20to%20{{title}}%20(%2F{{page.fileSlug}})">Email me</a>! <br>
+		{% include "utilities/back.njk" %}
 	</p>
 </article>
