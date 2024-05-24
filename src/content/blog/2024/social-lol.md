@@ -18,4 +18,4 @@ It's genuinely the best social media experience I've had in a long time.
 
 Thanks everyone. [See you soon](https://social.lol/@la).
 
-> If you see this and want to sign up to [omg.lol](https:/omg.lol), [use my referral link](https://home.omg.lol/referred-by/laker) if you'd like. I'd appreciate it. No pressure though.
+> If you see this and want to sign up to [omg.lol](https://omg.lol), [use my referral link](https://home.omg.lol/referred-by/laker) if you'd like. I'd appreciate it. No pressure though.
