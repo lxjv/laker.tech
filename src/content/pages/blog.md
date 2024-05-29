@@ -9,11 +9,4 @@ layout: page
 
 <hr>
 
-### My favourites
-
-{{collections.posts.out.data.title}}
-
-
-### Everything In Its Right Place
-
 {% include "posts/full.njk" %}
