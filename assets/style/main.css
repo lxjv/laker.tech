@@ -45,6 +45,7 @@ small {
 
 img {
 	border: 1px solid #fff8e7;
+	max-width: 720px;
 }
 
 .site-title,
