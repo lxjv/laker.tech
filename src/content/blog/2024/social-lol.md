@@ -1,6 +1,7 @@
 ---
 title: socialising, lol
 subtitle: people can be good sometimes
+date: 2024-05-07
 ---
 I've been moderating social.lol (along with the other great people on staff.lol) since August 2022.
 
