@@ -15,6 +15,9 @@ uplink: /interests
             {% if blog.feed != null %}
                 -- <a href="{{blog.feed}}">rss/atom feed</a>
             {% endif %}
+            {% if blog.comment != null %}
+                -- {{blog.comment}}
+            {% endif %}
         </li>
     {% endfor %}
 </ul>
@@ -25,6 +28,9 @@ uplink: /interests
             <a href="{{pod.url}}">{{pod.name}}</a>
             {% if pod.feed != null %}
                 -- <a href="{{pod.feed}}">rss/atom feed</a>
+            {% endif %}
+            {% if pod.comment != null %}
+                -- {{pod.comment}}
             {% endif %}
         </li>
     {% endfor %}

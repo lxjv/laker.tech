@@ -11,7 +11,8 @@
     {
       "name": "Neatnik Notes",
       "url": "https://notes.neatnik.net",
-      "feed": "https://notes.neatnik.net/rss.xml"
+      "feed": "https://notes.neatnik.net/rss.xml",
+      "comment": "Has a good taste in fonts."
     },
     {
       "name": "yours, tiramisu",
@@ -82,7 +83,7 @@
       "handle": "@TomScottGo"
     },
     {
-      "name": "No Boilerplate",
+     "name": "No Boilerplate",
       "handle": "@NoBoilerplate"
     },
     {
