@@ -22,6 +22,6 @@ debug:
 deploy:
   ssh eclipse /opt/sites/laker.tech/deploy.sh
 
-# (WIP) rollback on eclipse
-rollback:
-  ssh eclipse /opt/sites/laker.tech/rollback.sh
+cli:
+  cargo run --manifest-path ./cli/Cargo.toml
+

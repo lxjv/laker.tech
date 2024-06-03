@@ -173,3 +173,6 @@ public
 
 # Finder (MacOS) folder config
 .DS_Store
+
+# Rust
+**/target
