@@ -5,15 +5,15 @@
   "domain": "laker.tech",
   "url": "https://laker.tech",
   "author": {
-		"name": "Laker Turner",
-		"photo": {
-			"src": "https://laker.tech/cdn/image/hat.jpg",
-			"alt": "A black baseball cap with Keith Haring's 'Untitled, 1982' embroidered on it."
-		},
-		"url": "https://laker.tech",
-		"email": "la@laker.gay",
-		"bio": "I'm an 18 year old student from the UK, writer, amateur programmer and leather jacket enthusiast.",
-		"birthday": "2005-10-16",
-		"favourite_colour": "#6768AA"
-	}
+    "name": "Laker Turner",
+    "photo": {
+      "src": "https://laker.tech/cdn/image/hat.jpg",
+      "alt": "A black baseball cap with Keith Haring's 'Untitled, 1982' embroidered on it."
+    },
+    "url": "https://laker.tech",
+    "email": "la@laker.gay",
+    "bio": "I'm an 18 year old student from the UK, writer, amateur programmer and leather jacket enthusiast.",
+    "birthday": "2005-10-16",
+    "favourite_colour": "#6768AA"
+  }
 }

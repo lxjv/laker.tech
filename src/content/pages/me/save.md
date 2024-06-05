@@ -19,3 +19,5 @@ Also thank you in advance if you use any of these links <i class="fa-solid fa-he
 > Fun profile pages. If you use this link, I get 3 months of credit.
 - [Readwise](https://readwise.io/i/laker42)
 > Highlights from books. If you use this link, *we both* get 1 month free. (yay!)
+- [Bunny](https://bunny.net?ref=91p0c531yn)
+> The CDN that hosts the images for my blog posts!

@@ -7,6 +7,9 @@ layout: base
 	<div class="post-meta">
 
 	<h2 class="page-title">
+		{% if draft == true %}
+			DRAFT --
+		{% endif %}
 		<span class="p-name">{{title | safe}}</span>
 
 		<small>
@@ -22,8 +25,8 @@ layout: base
 	{% include "utilities/back.njk" %}
         <p>
 		{% for tag in tags %}
-            <span class="p-category">
-				<a class="ntd" href="/blog/t/{{tag}}">#{{tag}}</a>
+            <span>
+				<a class="ntd p-category" href="/blog/t/{{tag}}">#{{tag}}</a>
 			</span>
 		{% endfor %}
         </p>
@@ -36,7 +39,7 @@ layout: base
 
 	<div class="e-content">
 		{% if image.src != null %}
-		<img src="/cdn/image/posts/{{page.fileSlug}}/{{image.src}}" alt="{{image.alt}}" class="post-header-img">
+		<img src="https://cdn.laker.tech/dottech//posts/{{page.fileSlug}}/{{image.src}}" alt="{{image.alt}}" class="post-header-img">
 		<caption>{{image.alt}}</caption>
 		{% endif %}
 

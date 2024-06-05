@@ -4,7 +4,7 @@ SUBCMD=$1
 OPTION=$2
 SLUG=$3
 
-POST_DIR="src/content/blog/"
+POST_DIR="src/content/blog"
 
 echo "Zeppelin v3.0.0"
 
@@ -21,18 +21,17 @@ if [[ $SUBCMD == "post" ]]; then
 	    echo "Creating a new post"
 
 	    POST_SLUG=$(gum input --placeholder "post slug") || echo "gum broke or not installed"
+        echo $POST_SLUG
 
-    	cp ./src/cdn/template/post.md "$POST_DIR"/"$(date +"%Y")"/"$SLUG".md
+    	cp ./assets/text/templates/post.md $POST_DIR/$(date +"%Y")/$POST_SLUG.md
 
-	$EDITOR "$POST_DIR"/"$(date +"%Y")"/"$SLUG".md
+	    $EDITOR $POST_DIR/$(date +"%Y")/$POST_SLUG.md
 
     elif [[ $OPTION == "edit" ]]; then
 	    EDIT_THIS=$(gum file $POST_DIR) || echo "gum broke or not installed"
 	    $EDITOR "$EDIT_THIS"
 
     elif [[ $OPTION == "stats" ]]; then
-	    echo "zeppelin stats"
-
 	    POST_COUNT=$(find "$POST_DIR"/**.md | wc -l | tr -d ' ')
 
 	    echo "There are $POST_COUNT posts!"

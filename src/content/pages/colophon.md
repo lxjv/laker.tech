@@ -16,4 +16,7 @@ Source code is available from [lxjv/zeppelin on GitHub](https://github.com/lxjv/
 Don't take my blog posts though. That's rude.
 
 ### Privacy
-The only client-side JS used on this site is 
+I run a [self hosted instance](https://analytics.laker.tech/share/2xVrbvQTK4hfr5TP/laker.tech) of [Umami](https://umami.is) for analytics on this site.
+If you want to block it (which is fair), you can block JS from the domain `analytics.laker.tech`
+
+I might add some client-side java script to show things like what song i'm listening to from last.fm 
