@@ -5,7 +5,7 @@ date: 2024-01-09
 layout: page
 ---
 
-[RSS feed](/feed.xml) [Atom feed](/atom.xml) [JSON feed](/feed.json)
+Subscribe: [RSS feed](/feed.xml) / [Atom feed](/atom.xml) / [JSON feed](/feed.json)
 
 <hr>
 

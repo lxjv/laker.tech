@@ -1,12 +1,5 @@
 [
   {
-    "name": "laRing",
-    "link": "https://laker.tech/ring",
-    "prev": "https://webri.ng/webring/la/previous?via=https://laker.tech",
-    "next": "https://webri.ng/webring/la/next?via=https://laker.tech",
-    "random": "https://webri.ng/webring/la/random?via=https://laker.tech"
-  },
-  {
     "name": "NAMTAOcord webring",
     "link": "https://laker.tech/nmtring",
     "prev":"https://webri.ng/webring/nmtcord/previous?via=https://laker.tech",
