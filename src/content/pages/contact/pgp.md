@@ -6,6 +6,7 @@ uplink: /contact
 ---
 
 ### My key
+
 ```
 pub   ed25519 2023-08-27 [C]
       47C753CC927AFDD50300D8ABDB1FD88767ABB9CD
@@ -21,11 +22,13 @@ My up to date key is available at [https://laker.tech/.well-known/pgp](https://l
 
 To be honest, I haven't got the time to write down my criteria.
 
-essentially: 2 for people i've verified over the internet, 3 for people i've verified in real life, and 4 for if I was present while the key was made.
+- 2 for people i've verified over the internet
+- 3 for people i've verified in real life
+- 4 for if I was present while the key was made.
 
 ### Keys I've signed
 
-- (2) [tudbut@tudbut.de, gpg@mail.tudbut.de](/pgp/verified/tudbut_tudbut_de-2024-04-15.txt) -- 2024-04-15
+- (2) [tudbut@tudbut.de](/pgp/verified/tudbut_tudbut_de-2024-04-15.txt) -- 2024-04-15
 
 ### Questions I don't want to answer
 - I've seen your passport and it's got a different name on it?

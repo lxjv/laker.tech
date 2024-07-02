@@ -1,26 +1,30 @@
 @import url(./base.css);
 
+html {
+	background-image: linear-gradient(light-dark(var(--ctp-latte-base-rgb), var(--ctp-mocha-base-rgb)), calc(-200px + 100vh), light-dark(var(--ctp-latte-red-rgb), var(--ctp-mocha-rosewater-rgb)))
+}
+
 body {
-	padding: 0 5em;
-}
-
-header {
-	margin-top: 1em;
-}
-
-footer {
-	margin-bottom: 1em;
+	padding: calc(var(--padding-def) / 2) calc(var(--padding-def) * 2);
 }
 
 #content {
-	margin: 16.8px 0 0 0;
+	padding: 0.62em;
+	padding-left: 0;
+	width: fit-content;
+	max-width: 75%;
 }
 
-#content-wrap {
-	border: var(--accent) 3px solid;
-	border-radius: 5em 2em;
-	padding: 2em;
-	width: fit-content;
+.header-name { color: var(--text-colour);}
+
+.header-icon { color: var(--accent); }
+
+#header-nav>a:not(:last-child) {
+	margin-right: 0.24em;
+}
+
+footer {
+	margin-bottom: var(--padding-def); /* so things arent just cut off after the quote */
 }
 
 blockquote {
@@ -30,12 +34,17 @@ blockquote {
 	border-spacing: 5px;
 }
 
-hr {
-	border: none;
-	border-top: 3px solid var(--accent);
-	margin: 1em 0;
-	text-align: center;
-	height: 5px;
+.highlight {
+	background-color: var(--accent);
+	border-radius: 3.14px;
+	padding: 3.14px 4px;
+	font-weight: 500;
+	color: light-dark(var(--ctp-latte-base), var(--ctp-mocha-base)) !important;
+}
+
+.profile-picture {
+	border-radius: 3em 1em;
+	border: solid var(--accent) 3px;
 }
 
 small {
@@ -43,39 +52,31 @@ small {
 	font-weight: 420;
 }
 
+hr {
+	border: none;
+	border-top: 3px double var(--accent);
+	margin: 1em 0;
+	text-align: center;
+	height: 5px;
+}
+
+li {
+	list-style: square url('/cdn/image/Five_Pointed_Star_Solid.svg');
+}
+
 img {
-	border: 1px solid #fff8e7;
+	border: 1px solid var(--accent);
 	max-width: 720px;
 }
 
-.site-title,
-.page-title,
-#header-name>h1,
-#header-text-bq {
-	margin-top: 0;
-}
-
-#header-nav>a,
-.webring>a {
-	text-decoration: none;
-}
-
-#header-nav>:not(:last-child)::after {
-	content: " ⋆";
-}
-
-#webrings>:not(:last-child)::after {
-	content: " ⋆";
+.box {
+	max-width: fit-content;
+	padding: 2em 1.24em;
+	border: var(--accent) 3px solid;
+	border-radius: 1em 3em;
 }
 
 /* blog stuff */
 #post-header-image {
 	max-width: 720px;
-}
-
-.post-comment-ask {
-	max-width: fit-content;
-	padding: 1em 2em;
-	border: #6faace 1px solid;
-	border-radius: 1em 3em;
 }

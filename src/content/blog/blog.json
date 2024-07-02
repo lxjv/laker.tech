@@ -2,5 +2,6 @@
 	"permalink": "/blog/{{page.fileSlug}}/index.html",
 	"tags": "posts",
 	"layout": "post.njk",
-	"uplink": "/blog"
+	"uplink": "/blog",
+  "site_title_override": "laBlog"
 }

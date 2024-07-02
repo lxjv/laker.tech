@@ -1,13 +1,13 @@
 ---
-title: Selected Ambient Works
-subtitle: yes this is an aphex twin reference
+title: Projects 
+subtitle: Selected Ambient Works 05-24
 permalink: /projects/index.html
 ---
 
-{% for project in collections.project %}
-    <p>
+{% for project in collections.project | reverse %}
+    <li>
         <a href="{{ project.url }}">{{ project.data.title }}</a>
-        {{ project.date | datePretty }}
+        - {{ project.date | datePretty }}
         {{ project.data.subtitle }}
-    </p>
+    </li>
 {% endfor %}

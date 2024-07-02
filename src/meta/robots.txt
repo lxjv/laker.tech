@@ -1,0 +1,8 @@
+---
+permalink: /robots.txt
+---
+
+{% for bot in block %}
+	User-Agent: {{bot}}
+{% endfor %}
+Disallow: *

@@ -3,13 +3,14 @@ const { DateTime } = require("luxon");
 
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const eleventyGenerateHeroes = require('./config/plugins/opengraph.js');
+const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
 
-module.exports = function (eleventyConfig) {
+module.exports = function(eleventyConfig) {
 	// passthrough
 	eleventyConfig.addPassthroughCopy({ "assets": "cdn" });
 	eleventyConfig.addPassthroughCopy({ "assets/text/.well-known": ".well-known" });
 	eleventyConfig.addPassthroughCopy({ "assets/text/keys/pgp/la@laker.gay.asc": ".well-known/pgp" });
-	eleventyConfig.addPassthroughCopy({ "assets/text/robots.txt": "robots.txt" });
 	eleventyConfig.addPassthroughCopy({ "./assets/image/icons": "/" });
 	eleventyConfig.addPassthroughCopy({ "./assets/text/keys/pgp/": "/pgp/verified/" });
 	eleventyConfig.addWatchTarget("./assets/style/*");
@@ -24,7 +25,7 @@ module.exports = function (eleventyConfig) {
 	});
 
 	// STOP! you've violated the law
-	eleventyConfig.addFilter("limit", function (arr, limit) {
+	eleventyConfig.addFilter("limit", function(arr, limit) {
 		return arr.slice(0, limit);
 	});
 
@@ -40,9 +41,10 @@ module.exports = function (eleventyConfig) {
 
 	// plugins
 	eleventyConfig.addPlugin(pluginRSS);
+	eleventyConfig.addPlugin(eleventyGenerateHeroes);
 	eleventyConfig.addPlugin(syntaxHighlight, {
-		init: function ({ Prism }) {
-			
+		init: function({ Prism }) {
+
 		},
 	});
 
@@ -57,12 +59,14 @@ module.exports = function (eleventyConfig) {
 	};
 
 	// configure the library with options
-	let markdownLib = markdownIt(options).use(markdownItFootnote);
+	let markdownLib = markdownIt(options)
+		.use(markdownItFootnote)
+		.use(require('markdown-it-github-alerts'));
 	// set the library to process markdown files
 	eleventyConfig.setLibrary("md", markdownLib);
 
 	// DRAFTS
-	eleventyConfig.addGlobalData("eleventyComputed.permalink", function () {
+	eleventyConfig.addGlobalData("eleventyComputed.permalink", function() {
 		return (data) => {
 			// Always skip during non-watch/serve builds
 			if (data.draft && !process.env.BUILD_DRAFTS) {
@@ -76,7 +80,7 @@ module.exports = function (eleventyConfig) {
 	// When `eleventyExcludeFromCollections` is true, the file is not included in any collections
 	eleventyConfig.addGlobalData(
 		"eleventyComputed.eleventyExcludeFromCollections",
-		function () {
+		function() {
 			return (data) => {
 				// Always exclude from non-watch/serve builds
 				if (data.draft && !process.env.BUILD_DRAFTS) {
@@ -94,6 +98,9 @@ module.exports = function (eleventyConfig) {
 			process.env.BUILD_DRAFTS = true;
 		}
 	});
+
+	eleventyConfig.setQuietMode(true);
+	eleventyConfig.addPlugin(directoryOutputPlugin);
 
 	// dev server stuff wahey
 	eleventyConfig.setServerOptions({

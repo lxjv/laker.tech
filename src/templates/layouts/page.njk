@@ -2,12 +2,14 @@
 layout: base.njk
 ---
 
-<div>
+<div style="margin-bottom: 0.75em">
 	<h2 class="page-title">
         {{title | safe}}
-        <small>
-            Last updated {{page.date | datePretty}}
-        </small>
+		{% if nodate == false %}
+			<small>
+            	Last updated {{page.date | datePretty}}
+        	</small>	
+		{% endif %}
     </h2>
 
 	{% if uplink != null %}
@@ -21,6 +23,6 @@ layout: base.njk
     {% endif %}
 </div>
 
-<article>
+<article style="margin-top: 0.75em">
 	{{content | safe}}
 </article>

@@ -7,7 +7,7 @@ subtitle: How to contact me!
 - For any work purposes, please email [laker@laker.tech](mailto:laker@laker.tech)
 
 ### Social Media
-The only social media I use particularly often is Mastodon: [@la@social.lol](https://social.lol/@la)
+==The only social media== I use particularly often is Mastodon: [@la@social.lol](https://social.lol/@la)
 
 ### Messaging
 > I generally don't accept friend requests unless I talk to you often, so don't be offended thanx

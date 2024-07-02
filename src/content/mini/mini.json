@@ -1,0 +1,8 @@
+{
+  "permalink": "/notes/{{page.fileSlug}}",
+  "tags": "mini",
+  "layout": "mini.njk",
+  "eleventyComputed": {
+    "title": "laNote - {{page.date | datePretty}}" 
+  }
+}

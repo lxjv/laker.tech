@@ -22,6 +22,3 @@ debug:
 deploy:
   ssh eclipse /opt/sites/laker.tech/deploy.sh
 
-cli:
-  cargo run --manifest-path ./cli/Cargo.toml
-

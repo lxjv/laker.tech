@@ -1,26 +1,26 @@
 [
   {
-    "name": "NAMTAOcord webring",
+    "name": "NAMTAOcord",
     "link": "https://laker.tech/nmtring",
     "prev":"https://webri.ng/webring/nmtcord/previous?via=https://laker.tech",
     "next":"https://webri.ng/webring/nmtcord/next?via=https://laker.tech",
     "random": "https://webri.ng/webring/nmtcord/random?via=https://laker.tech"
   },
   {
-    "name": "🕸💍",
+    "name": "🕸💍 Indieweb",
     "link": "https://xn--sr8hvo.ws",
     "prev": "https://xn--sr8hvo.ws/previous",
     "next": "https://xn--sr8hvo.ws/next"
   },
   {
-    "name": "CSS.joy Webring",
+    "name": "CSS.joy",
     "link": "https://cs.sjoy.lol",
     "prev": "https://webri.ng/webring/cssjoy/previous?via=https://laker.tech",
     "next": "https://webri.ng/webring/cssjoy/next?via=https://laker.tech",
     "random": "https://webri.ng/webring/cssjoy/random?via=https://laker.tech"
   },
   {
-    "name": "bucket webring",
+    "name": "bucketring",
     "link": "https://webring.bucketfish.me",
     "prev": "https://webring.bucketfish.me/redirect.html?to=prev&name=laker",
     "next": "https://webring.bucketfish.me/redirect.html?to=next&name=laker"

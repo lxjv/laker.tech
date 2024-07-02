@@ -5,21 +5,24 @@
 	</p>
 
 	<div id="webrings">
+		<b>Webrings:</b>
+		<span id="webrings-rings">
 		{% for ring in webrings %}
-		<span class="webring">
-			<a href="{{ring.prev}}"><-- </a>
-			<a href="{{ring.link}}">{{ring.name}}</a>
-			<a href="{{ring.next}}">--></a>
-		{% if ring.random != null %}
-              		<a href="{{ring.random}}">random</a>
-            	{% endif %}
+			<span class="webring">
+			<a href="{{ring.prev}}" class="ntd">← </a>
+			<a href="{{ring.link}}" class="ntd">{{ring.name}}</a>
+			<a href="{{ring.next}}" class="ntd"> →</a>
+			{% if ring.random != null %}
+              	<a href="{{ring.random}}" class="ntd">(random)</a>
+            {% endif %}
 		</span>
 		{% endfor %}
+		</span>
 	</div>
 		
 	<div id="footer-quotes" style="margin-top: 1em;">
 		{% for quote in flavourtext.quotes | randomItem %}
-		<blockquote id="header-text-bq">{{ quote | safe }}</blockquote>
+			<blockquote id="header-text-bq">{{ quote | safe }}</blockquote>
 		{% endfor %}
 	</div>
 </footer>

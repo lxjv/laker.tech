@@ -1,6 +1,6 @@
 {
 	"permalink": "/project/{{page.fileSlug}}/index.html",
 	"tags": "project",
-	"layout": "page.njk",
+	"layout": "project.njk",
 	"uplink": "/projects"
 }

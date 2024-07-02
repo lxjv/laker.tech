@@ -2,7 +2,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title> {{title}} | {{metadata.title}}</title>
+	<title> {{title}} | {{ site_title_override | default(metadata.title) }}</title>
 	<meta name="description" content="{{subtitle}}">
 
 	<!-- favicons -->
@@ -58,6 +58,8 @@
 	<link rel="stylesheet" href="/cdn/style/main.css">
 
 	<!-- font awesome and analytics -->
-	<script defer src="https://analytics.laker.tech/script.js" data-website-id="0cac1131-5ec2-4e75-9c72-874444dd46fd"></script>
+	{% if variables.env != "dev" %}
+		<script defer src="https://analytics.laker.tech/script.js" data-website-id="0cac1131-5ec2-4e75-9c72-874444dd46fd"></script>
+	{% endif %}
 	<script defer src="https://kit.fontawesome.com/a4ad01e3e6.js" crossorigin="anonymous"></script>
 </head>

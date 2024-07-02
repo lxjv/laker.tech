@@ -1,0 +1,5 @@
+{% for note in collections.mini %}
+	{% if note.data.link !== null %}
+		{{ note.data.link | urlize | safe }}
+	{% endif %}
+{% endfor %}

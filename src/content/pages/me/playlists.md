@@ -1,9 +1,8 @@
 ---
 title: playlists
 ---
-yes these are all spotify, i dont have any other services.
-
-I'll make apple music versions if I move over there.
+Yes, these are all Spotify-only.
+I'll make Apple Music versions if I move over there long-term.
 
 > [my spotify profile](https://open.spotify.com/user/8wi9b16pohlekgyoht7hfecqf)
 

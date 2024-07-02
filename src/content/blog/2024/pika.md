@@ -3,6 +3,7 @@ title: My opinions on Pika
 subtitle: Opinions on a new blog platform from a chronic blog-hopper
 date: 2024-01-09
 tags: ["tech", "blogs"]
+draft: true
 ---
 
 > This is mostly just a copy-paste of [this toot I made at 11pm last night](https://social.lol/@la/111722937956248582) with a little extra thrown in.

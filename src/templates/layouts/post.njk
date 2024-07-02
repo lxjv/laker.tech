@@ -18,9 +18,7 @@ layout: base
 				{{page.date | datePretty}}
 				</time>
 			</a>
-			<span>{{content | wordcount}} words</span>
 		</small>
-
 	</h2>
 	{% include "utilities/back.njk" %}
         <p>
@@ -36,7 +34,7 @@ layout: base
 		</blockquote>
 
 	</div>
-
+<hr>
 	<div class="e-content">
 		{% if image.src != null %}
 		<img src="https://cdn.laker.tech/dottech//posts/{{page.fileSlug}}/{{image.src}}" alt="{{image.alt}}" class="post-header-img">
@@ -46,7 +44,7 @@ layout: base
 		{{content | safe}}
 	</div>
 
-	<p class="post-comment-ask">
+	<p class="box">
 		Want to comment on this post?
 		<a href="mailto:hello+{{page.fileSlug}}@concorde.blog?subject=A%20reply%20to%20{{title}}%20(%2F{{page.fileSlug}})">Email me</a>! <br>
 		{% include "utilities/back.njk" %}

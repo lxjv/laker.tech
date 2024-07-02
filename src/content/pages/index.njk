@@ -7,16 +7,16 @@ layout: base
 
 <span class="h-card center" style="justify-content:left">
     <p style="margin-top: 0;">
-        Hi! I'm <a class="u-url ntd" rel="me" href="{{metadata.author.url}}">Laker Turner</a>
-        (<a href="https://laker.tech/pronouns" class="u-pronouns">she/her</a>). <br>
+        Hi! I'm <a class="u-url ntd highlight" rel="me" href="{{metadata.author.url}}">Laker Turner</a>
+		(<a href="https://laker.tech/pronouns" class="u-pronouns">she/her</a>). <br><br>
         <span class="p-note">
-            I'm an 18 year old student from the UK, writer, <br>
-            amateur programmer and leather jacket enthusiast.
+			I'm an 18 year old (soon to be) music student from the UK, <br>
+			writer, amateur programmer and leather jacket enthusiast.
         </span>
     </p>
 	
     <img
-		style="margin-left: 1em;"
+		style="margin-left: 2em;"
 		class="u-photo profile-picture"
 		height=120 width=120
 		src="{{metadata.author.photo.src}}"
@@ -27,23 +27,22 @@ layout: base
 <p>I've been creative my entire life, but started writing to clear my head, about 3 years ago.</p>
 
 <p>
-    I listen to music essentially every waking second of the day.
+    I listen to music every second I'm awake.
     You can look at what I'm listening to over on <a href="https://last.fm/user/lxjv">Last.fm</a>.
 </p>
 
 <p>
-    I'm learning a mix of Rust and Java/Typescript right now, but I'm probably going to stick with Rust. <br>
-    On the web side, I like Eleventy (it's what builds this site!).
+	I'm learning a mix of <b>Rust</b> and <b>Typescript</b> right now, but I'm probably going to stick with Rust. <br>
+	On the web side, I like <b>Eleventy</b> (it's what builds this site!).
 </p>
+
 <p>
     When I'm not knee-deep in my terminal, I like making music, taking photographs <br>
     and reading <strong>Hitch-Hiker's Guide to the Galaxy</strong> for the 5th time.
 </p>
 
 <p>
-    Feel free to walk around and see what's going on, like my <a href="/blog">/blog</a>,
-    how i'm doing <a href="/now">/now</a>
-    or some <a href="/playlists">/playlists</a>.
+    Feel free to walk around and see what's going on.
 </p>
 
 <p>
@@ -51,3 +50,18 @@ layout: base
     I'm on the fediverse as <a href="https://social.lol/@la">@la@social.lol</a>
     or email me at <a href="mailto:hello@laker.tech">hello@laker.tech</a>!
 </p>
+
+<div id="latest-mini" class="box" style="margin-top: 1em;">
+	<h3 style="margin-top: 0;">Latest <a href="/notes">laNote</a></h3>
+	{% for post in collections.mini | limit(1) %}
+		<blockquote>
+			{% if post.data.link != null %}
+				<i class="fa-solid fa-link"></i> <i class="fa-solid fa-arrow-right"></i> {{post.data.link | urlize | safe }}<br>
+			{% endif %}
+			
+			{{post.content | striptags(true) | escape | nl2br}}<br>
+			
+			— <i class="fa-solid fa-calendar-days"></i> <a href="{{post.url}}">{{post.date | datePretty}}</a>
+		</blockquote>
+	{% endfor %}
+</div>

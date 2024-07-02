@@ -1,0 +1,23 @@
+---
+layout: base
+---
+
+<style>
+	#flightnote {
+		font-size: 125%;
+	}
+</style>
+
+<p class="note-content" id="entry-text">
+	A note from <i class="fa-solid fa-calendar-days"></i> <time class="dt-published" datetime="{{page.date | dateISO}}">{{page.date | datePretty}}</time>...
+</p>
+
+<blockquote id="flightnote">
+	{% if link != null %}
+		<i class="fa-solid fa-link"></i> <i class="fa-solid fa-arrow-right"></i> {{link | urlize | safe }}<br>
+	{% endif %}
+			
+	{{content | safe}}
+</blockquote>
+
+<p><a href="/notes" style="margin-top: 1em;">see all notes</a></p>

@@ -1,61 +1,80 @@
+@import url(./ctp.css);
 @import url(./reset.css);
 
-/* -- variables -- */
+@import url(https://fonts.bunny.net/css?family=albert-sans:400,500,500i|ibm-plex-mono:400,700i|ibm-plex-sans:300,300i,400,400i,500,500i,700,700i);
+
 :root {
-	/* colors */
-	--accent: var(--indigo);
-	--accent2: var(--lblue);
+	color-scheme: light dark;
 
-	--black: #040404;
-	--latte: #fff8e7;
-	--indigo: #6768AA;
-	--lblue: #94B1FF;
-	--orange: #DC784F;
+	--accent: light-dark(var(--ctp-latte-red), var(--ctp-mocha-lavender));
 
-	--lm-text: var(--black);
-	--lm-back: var(--latte);
+	--lm-background: var(--ctp-latte-base);
+	--dm-background: var(--ctp-mocha-crust);
 
-	--dm-text: var(--latte);
-	--dm-back: var(--black);
+	--lm-textcol: var(--ctp-latte-text);
+	--dm-textcol: var(--ctp-mocha-text);
+	--lm-linkcol: var(--ctp-latte-subtext1);
+	--dm-linkcol: var(--ctp-mocha-subtext1);
 
-	--font-prose: 'OpenDyslexic', 'Atkinson Hyperlegible', 'Albert Sans', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-	--font-code: 'IBM Plex Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	--background: light-dark(var(--lm-background), var(--dm-background));
+	--text-colour: light-dark(var(--lm-textcol), var(--dm-textcol));
+	--link-colour: light-dark(var(--lm-linkcol), var(--dm-linkcol));
+
+	--font-title: 'OpenDyslexic', 'Atkinson Hyperlegible', 'IBM Plex Sans', system-ui, sans-serif;
+	--font-prose: 'OpenDyslexic', 'Atkinson Hyperlegible', 'IBM Plex Sans', system-ui, sans-serif;
+	--font-code: 'IBM Plex Mono';
+
+	--padding-def: 1.24em;
 }
 
-/* -- light mode and defaults -- */
-body {
-	background-color: var(--lm-back);
-	color: var(--lm-text);
-	
+html {
+	background: var(--background);
+	color: var(--text-colour);
 	font-family: var(--font-prose);
-	font-size: 1.05rem;
+	font-weight: 400;
+	line-height: 105%;
 }
 
-a[href] {
-	color: var(--lm-text);
-	text-decoration: underline dotted var(--black);
+a {
+	text-decoration: underline dotted var(--accent);
 }
 
-/* -- dark mode -- */
-@media (prefers-color-scheme: dark) {
-	body {
-		background: var(--dm-back);
-		color: var(--dm-text);
-	}
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: var(--accent);
+}
 
-	hr {
-		border-top: 1px solid var(--dm-text);
-	}
-
-	a[href] {
-		color: var(--dm-text);
-		text-decoration: underline dotted #fff8e79c;
-	}
+#webrings-rings>:not(:last-child):after {
+	content: " ⋆ ";
+	text-decoration: none;
 }
 
 /* -- utility classes -- */
-/* Center thingies */ .center { display: flex; align-items: center; justify-content: center; }
-/* No Text Decoration */ .ntd { text-decoration: none !important; }
-/* No Display */ .nd { display: none; }
-/* No Borders (or tories thx) */ .nb { border: none !important; }
-/* No Margin */ .nm { margin: 0 !important; }
+/* Center thingies */
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* No Text Decoration */
+.ntd {
+	text-decoration: none !important;
+}
+
+/* No Display */
+.nd {
+	display: none;
+}
+
+/* No Borders (or tories thx) */
+.nb {
+	border: none !important;
+}
+
+/* No Margin */
+.nm {
+	margin: 0 !important;
+}
