@@ -1,18 +1,24 @@
-// eleventy's config file
 const { DateTime } = require("luxon");
 
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const eleventyGenerateHeroes = require('./config/plugins/opengraph.js');
 const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
+
+const eleventyGenerateHeroes = require("./config/plugins/opengraph.js");
 
 module.exports = function(eleventyConfig) {
 	// passthrough
-	eleventyConfig.addPassthroughCopy({ "assets": "cdn" });
-	eleventyConfig.addPassthroughCopy({ "assets/text/.well-known": ".well-known" });
-	eleventyConfig.addPassthroughCopy({ "assets/text/keys/pgp/la@laker.gay.asc": ".well-known/pgp" });
+	eleventyConfig.addPassthroughCopy({ assets: "cdn" });
+	eleventyConfig.addPassthroughCopy({
+		"assets/text/.well-known": ".well-known",
+	});
+	eleventyConfig.addPassthroughCopy({
+		"assets/text/keys/pgp/la@laker.gay.asc": ".well-known/pgp",
+	});
 	eleventyConfig.addPassthroughCopy({ "./assets/image/icons": "/" });
-	eleventyConfig.addPassthroughCopy({ "./assets/text/keys/pgp/": "/pgp/verified/" });
+	eleventyConfig.addPassthroughCopy({
+		"./assets/text/keys/pgp/": "/pgp/verified/",
+	});
 	eleventyConfig.addWatchTarget("./assets/style/*");
 
 	// FILTER TIME
@@ -29,6 +35,20 @@ module.exports = function(eleventyConfig) {
 		return arr.slice(0, limit);
 	});
 
+	eleventyConfig.addFilter("arrayRemove", function(array, remove) {
+		const itemToRemove = remove;
+
+		// Find the index of the item to remove
+		const index = array.indexOf(itemToRemove);
+
+		if (index !== -1) {
+			// Remove the item using splice
+			array.splice(index, 1);
+		}
+
+		return array;
+	});
+
 	// Oct 16, 2005
 	eleventyConfig.addFilter("datePretty", (dateObj) => {
 		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
@@ -43,9 +63,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginRSS);
 	eleventyConfig.addPlugin(eleventyGenerateHeroes);
 	eleventyConfig.addPlugin(syntaxHighlight, {
-		init: function({ Prism }) {
-
-		},
+		init: function({ Prism }) { },
 	});
 
 	// markdown time
@@ -54,14 +72,14 @@ module.exports = function(eleventyConfig) {
 
 	let options = {
 		html: true, // Enable HTML tags in source
-		breaks: true,  // Convert '\n' in paragraphs into <br>
-		linkify: true // Autoconvert URL-like text to links
+		breaks: true, // Convert '\n' in paragraphs into <br>
+		linkify: true, // Autoconvert URL-like text to links
 	};
 
 	// configure the library with options
 	let markdownLib = markdownIt(options)
 		.use(markdownItFootnote)
-		.use(require('markdown-it-github-alerts'));
+		.use(require("markdown-it-github-alerts"));
 	// set the library to process markdown files
 	eleventyConfig.setLibrary("md", markdownLib);
 
@@ -89,7 +107,7 @@ module.exports = function(eleventyConfig) {
 
 				return data.eleventyExcludeFromCollections;
 			};
-		}
+		},
 	);
 
 	eleventyConfig.on("eleventy.before", ({ runMode }) => {
@@ -109,11 +127,12 @@ module.exports = function(eleventyConfig) {
 	});
 
 	return {
-		dir: { // directories for stuff woo
-			input: 'src',
-			output: 'public',
-			includes: 'templates/components',
-			layouts: 'templates/layouts'
-		}
+		dir: {
+			// directories for stuff woo
+			input: "src",
+			output: "public",
+			includes: "templates/components",
+			layouts: "templates/layouts",
+		},
 	};
-}
+};

@@ -1,9 +1,5 @@
 @import url(./base.css);
 
-html {
-	background-image: linear-gradient(light-dark(var(--ctp-latte-base-rgb), var(--ctp-mocha-base-rgb)), calc(-200px + 100vh), light-dark(var(--ctp-latte-red-rgb), var(--ctp-mocha-rosewater-rgb)))
-}
-
 body {
 	padding: calc(var(--padding-def) / 2) calc(var(--padding-def) * 2);
 }
@@ -15,16 +11,40 @@ body {
 	max-width: 75%;
 }
 
-.header-name { color: var(--text-colour);}
+@media (max-width: 35rem) {
+	html {
+		font-size: 100%;
+	}
 
-.header-icon { color: var(--accent); }
+	body {
+		padding: 0;
+	}
+
+	#hd-quote {
+		display: none;
+	}
+
+	header>h1 {
+		padding: 0 15px;
+	}
+}
+
+
+.header-name {
+	color: var(--text-colour);
+}
+
+.header-icon {
+	color: var(--accent);
+}
 
 #header-nav>a:not(:last-child) {
 	margin-right: 0.24em;
 }
 
 footer {
-	margin-bottom: var(--padding-def); /* so things arent just cut off after the quote */
+	margin-bottom: var(--padding-def);
+	/* so things arent just cut off after the quote */
 }
 
 blockquote {
@@ -60,7 +80,7 @@ hr {
 	height: 5px;
 }
 
-li {
+ul.a {
 	list-style: square url('/cdn/image/Five_Pointed_Star_Solid.svg');
 }
 
@@ -74,6 +94,10 @@ img {
 	padding: 2em 1.24em;
 	border: var(--accent) 3px solid;
 	border-radius: 1em 3em;
+}
+
+.fa-rss {
+	color: light-dark(var(--ctp-latte-peach), var(--ctp-mocha-peach));
 }
 
 /* blog stuff */

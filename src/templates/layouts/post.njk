@@ -22,7 +22,7 @@ layout: base
 	</h2>
 	{% include "utilities/back.njk" %}
         <p>
-		{% for tag in tags %}
+		{% for tag in tags | arrayRemove(posts) %}
             <span>
 				<a class="ntd p-category" href="/blog/t/{{tag}}">#{{tag}}</a>
 			</span>

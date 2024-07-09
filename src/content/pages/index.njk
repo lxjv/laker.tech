@@ -5,7 +5,7 @@ permalink: /index.html
 layout: base
 ---
 
-<span class="h-card center" style="justify-content:left">
+<span class="h-card center" style="justify-content:left; flex-wrap: flex-reverse">
     <p style="margin-top: 0;">
         Hi! I'm <a class="u-url ntd highlight" rel="me" href="{{metadata.author.url}}">Laker Turner</a>
 		(<a href="https://laker.tech/pronouns" class="u-pronouns">she/her</a>). <br><br>
@@ -51,17 +51,4 @@ layout: base
     or email me at <a href="mailto:hello@laker.tech">hello@laker.tech</a>!
 </p>
 
-<div id="latest-mini" class="box" style="margin-top: 1em;">
-	<h3 style="margin-top: 0;">Latest <a href="/notes">laNote</a></h3>
-	{% for post in collections.mini | limit(1) %}
-		<blockquote>
-			{% if post.data.link != null %}
-				<i class="fa-solid fa-link"></i> <i class="fa-solid fa-arrow-right"></i> {{post.data.link | urlize | safe }}<br>
-			{% endif %}
-			
-			{{post.content | striptags(true) | escape | nl2br}}<br>
-			
-			— <i class="fa-solid fa-calendar-days"></i> <a href="{{post.url}}">{{post.date | datePretty}}</a>
-		</blockquote>
-	{% endfor %}
-</div>
+{% include "mini/latest-full.njk" %}

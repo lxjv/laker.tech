@@ -1,0 +1,14 @@
+<div id="latest-mini" class="box" style="margin-top: 1em;">
+	<h3 style="margin-top: 0;">Latest <a href="/notes">laNote</a></h3>
+	{% for post in collections.mini | limit(1) %}
+		<blockquote>
+			{% if post.data.link != null %}
+				<i class="fa-solid fa-link"></i> <i class="fa-solid fa-arrow-right"></i> {{post.data.link | urlize | safe }}<br>
+			{% endif %}
+			
+			{{post.content | striptags(true) | escape | nl2br}}<br>
+			
+			— <i class="fa-solid fa-calendar-days"></i> <a href="{{post.url}}">{{post.date | datePretty}}</a>
+		</blockquote>
+	{% endfor %}
+</div>

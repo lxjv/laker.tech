@@ -2,6 +2,7 @@
 title: Sleepy Tic-Tac-Toe
 techstack: ["react"]
 exturl: https://eepyttt.vercel.app/
+sourceurl: https://github.com/lxjv/sleepy-ttt
 date: 2024-06-01
 ---
 

@@ -1,31 +1,5 @@
-@import url(./ctp.css);
-@import url(./reset.css);
-
-@import url(https://fonts.bunny.net/css?family=albert-sans:400,500,500i|ibm-plex-mono:400,700i|ibm-plex-sans:300,300i,400,400i,500,500i,700,700i);
-
-:root {
-	color-scheme: light dark;
-
-	--accent: light-dark(var(--ctp-latte-red), var(--ctp-mocha-lavender));
-
-	--lm-background: var(--ctp-latte-base);
-	--dm-background: var(--ctp-mocha-crust);
-
-	--lm-textcol: var(--ctp-latte-text);
-	--dm-textcol: var(--ctp-mocha-text);
-	--lm-linkcol: var(--ctp-latte-subtext1);
-	--dm-linkcol: var(--ctp-mocha-subtext1);
-
-	--background: light-dark(var(--lm-background), var(--dm-background));
-	--text-colour: light-dark(var(--lm-textcol), var(--dm-textcol));
-	--link-colour: light-dark(var(--lm-linkcol), var(--dm-linkcol));
-
-	--font-title: 'OpenDyslexic', 'Atkinson Hyperlegible', 'IBM Plex Sans', system-ui, sans-serif;
-	--font-prose: 'OpenDyslexic', 'Atkinson Hyperlegible', 'IBM Plex Sans', system-ui, sans-serif;
-	--font-code: 'IBM Plex Mono';
-
-	--padding-def: 1.24em;
-}
+@import url("./reset.css");
+@import url("./vars.css");
 
 html {
 	background: var(--background);
