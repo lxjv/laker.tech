@@ -35,5 +35,4 @@ I'll still be using Bunny CDN for images cause it's easier than fiddling about w
 
 The reason I'm moving back to GitHub (not including Vercel) is everybody[^6] else uses it.
 Which means all the tooling, integrations, and all other manner of cool shit is entirely dependent on GitHub
-and I've got neither the time or the skills to remake everything I use.
-
+and I've got neither the time or the skills to remake everything I use into 

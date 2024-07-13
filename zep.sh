@@ -47,6 +47,7 @@ deploy() {
 	fi	
 }
 
+# if no subcommand
 if [ -z "$SUBCMD" ]; then
     SUBCMD_FMT=$(gum choose "Create a new post" "Show post stats" "Deploy to Eclipse" "quit") || echo "gum broke or not installed"
 	if [[ $SUBCMD_FMT == "Create a new post" ]]; then

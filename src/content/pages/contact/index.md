@@ -3,7 +3,7 @@ title: Contact
 subtitle: How to contact me!
 ---
 
-- My personal email is [la@laker.gay](mailto:la@laker.gay) ([🔑](/.well-known/pgp)).
+- My personal email is [la@laker.gay](mailto:la@laker.gay) ([pgp key 🔑](/.well-known/pgp))
 - For any work purposes, please email [laker@laker.tech](mailto:laker@laker.tech)
 
 ### Social Media
@@ -24,10 +24,6 @@ The only social media I use particularly often is Mastodon: [@la@social.lol](htt
 - laker on Liberachat
 
 > You can find me around [Sourcehut](https://sr.ht)'s channels `#sr.ht and #sr.ht.watercooler` as well as `##eleventy`
-
-```bash
-echo "awawa" > file.md
-```
 
 ### Encryption keys
 
