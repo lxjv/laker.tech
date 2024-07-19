@@ -3,7 +3,11 @@ title: Colophon
 subtitle: How this is beamed into your home.
 ---
 
-laker.tech is made with [Eleventy](https://11ty.dev), and hosted using [Caddy](https://caddyserver.com) on my VPS, [Eclipse](https://eclipse.laker.tech).
+laker.tech is made with [Eleventy](https://11ty.dev), and hosted using Vercel. 
+
+{% comment %}
+	[Caddy](https://caddyserver.com) on my VPS, [Eclipse](https://eclipse.laker.tech)
+{% endcomment %}
 
 Everything was written by hand, using Neovim. I don't use AI.
 
@@ -14,7 +18,7 @@ The colour-scheme is Catppuccin, either *Latte* or *Mocha* depending on whether 
 
 The little tree guy you might see around here was drawn by [Momo](https://heyheymomo.com).
 
-Source code is available from [lxjv/pinto on GitHub](https://github.com/lxjv/pinto).
+Source code is available from [this repo](https://github.com/lxjv/laker.tech).
 
 Don't take my blog posts though. That's rude.
 

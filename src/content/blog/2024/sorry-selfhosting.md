@@ -10,7 +10,7 @@ image:
 ---
 
 I spend at least 20% of my time on my computer fiddling with self-hosting services such as [Forgejo](https://git.laker.tech), [Cobalt](https://cobalt.laker.tech) etc.
-That includes this site. However, it's also a right faff[^1] to set things up.
+That includes this site. However, it's also a right faff [^1] to set things up.
 
 I also have a tendency to be quite... heavy-handed with the button that rebuilds my VPS that everything I host runs on.
 Last time I did that, [^2] I knocked out this site for 20 minutes and that made me **extremely** anxious as I scrambled to get it back up. [^3]
@@ -31,8 +31,9 @@ I'll still be using Bunny CDN for images cause it's easier than fiddling about w
 [^4]: I could do this on my VPS but SSH over github / forgejo actions sounds like hell to setup
 [^5]: It also means I get a reason to make my git commits actually make sense
 
-### Everybody Likes You, Github (except me) [[source](https://www.youtube.com/watch?v=4xElp-lYnyE)]
+### [Everybody Likes You](https://www.youtube.com/watch?v=4xElp-lYnyE), Github (except me)
 
 The reason I'm moving back to GitHub (not including Vercel) is everybody[^6] else uses it.
 Which means all the tooling, integrations, and all other manner of cool shit is entirely dependent on GitHub
-and I've got neither the time or the skills to remake everything I use into 
+and I've got neither the time or the skills to remake everything I use for Forgejo or Sourcehut.
+

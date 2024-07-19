@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/source", "destination": "https://github.com/lxjv/laker.tech" },
+    { "source": "/git/:path*", "destination": "https://github.com/lxjv/:path*" }
+  ]
+}

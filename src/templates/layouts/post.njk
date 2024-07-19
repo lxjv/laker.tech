@@ -37,16 +37,31 @@ layout: base
 <hr>
 	<div class="e-content">
 		{% if image.src != null %}
-		<img src="https://cdn.laker.tech/dottech//posts/{{page.fileSlug}}/{{image.src}}" alt="{{image.alt}}" class="post-header-img">
-		<caption>{{image.alt}}</caption>
+			<img src="https://cdn.laker.tech/dottech//posts/{{page.fileSlug}}/{{image.src}}" alt="{{image.alt}}" class="post-header-img">
+			<caption>{{image.alt}}</caption>
 		{% endif %}
 
 		{{content | safe}}
 	</div>
-
-	<p class="box">
-		Want to comment on this post?
-		<a href="mailto:hello+{{page.fileSlug}}@concorde.blog?subject=A%20reply%20to%20{{title}}%20(%2F{{page.fileSlug}})">Email me</a>! <br>
-		{% include "utilities/back.njk" %}
-	</p>
 </article>
+
+<div class="box" style="margin-top: 1.24em">	
+	<p style="width: 25em; margin-top: 0;">
+		Want to comment on this post?
+		<a 
+			href="mailto:hello+{{page.fileSlug}}@concorde.blog?subject=A%20reply%20to%20{{title}}%20(%2F{{page.fileSlug}})"
+		>Email me</a>!
+	</p>
+		
+	<script
+		src="https://utteranc.es/client.js"
+		repo="lxjv/laker.tech"
+		issue-term="title"
+		label="comments"
+		theme="icy-dark"
+		crossorigin="anonymous"
+		async
+		defer>
+	</script>
+	{% include "utilities/back.njk" %}
+</div>

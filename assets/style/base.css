@@ -13,6 +13,10 @@ a {
 	text-decoration: underline dotted var(--accent);
 }
 
+.footnote-ref>a {
+	text-decoration: none;
+}
+
 a:link,
 a:visited,
 a:hover,
